@@ -52,7 +52,7 @@
   </div>
   <div class="navbar-menu">
     <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
-      <a class="navbar-item" href="#">
+      <a class="navbar-item" href="index.html">
       <span class="icon">
           <i class="fas fa-home"></i>
       </span>
@@ -164,6 +164,13 @@
           </span>
           <span>Score file</span>
         </a>
+        <a href="scores/additive.score"
+           class="external-link button is-normal is-rounded is-dark">
+          <span class="icon">
+              <i class="fas fa-file-code"></i>
+          </span>
+          <span>Project code</span>
+        </a>
     </div>
   </div>
 </section>
@@ -197,19 +204,13 @@
         <div class="content has-text-justified">
           <p>
             This is a solo project by me. The selection is a compilation of melodies we have all heard and enjoyed since our childhoods. Even across
-            different language, cultures and regions, the melodies are all the same making us all undergo a shared experience in our lives.
+            different language, cultures and regions, the melodies are all the same making us all undergo a shared experience in our lives. I have implemented the Additive 
+            Synthesis and Effects module (Compression, Chorus and Noise Gate).
           </p>
           <p>
-            Our approach augments neural radiance fields
-            (NeRF) by optimizing an
-            additional continuous volumetric deformation field that warps each observed point into a
-            canonical 5D NeRF.
-            We observe that these NeRF-like deformation fields are prone to local minima, and
-            propose a coarse-to-fine optimization method for coordinate-based models that allows for
-            more robust optimization.
-            By adapting principles from geometry processing and physical simulation to NeRF-like
-            models, we propose an elastic regularization of the deformation field that further
-            improves robustness.
+            I am not familiar with music composition in general so I used generative AI, ChatGPT (GPT-4o), for generating the score file.
+            I provided a prompt of the melodies I wanted, I also included their notes in C-major obtained from the internet to ensure that the generation is correct. I requested it to handle the 
+            duration, and measures so that its organized nicely.
           </p>
         </div>
       </div>
@@ -221,38 +222,59 @@
       </span>
       <div class="content has-text-justified">
         <p>
-          This is a solo project by me. The selection is a compilation of melodies we have all heard and enjoyed since our childhoods. Even across
-          different language, cultures and regions, the melodies are all the same making us all undergo a shared experience in our lives.
+          The actual score file used can be accessed from above. The format used for the score file is XML as shown below
         </p>
+<pre>
+<code>
+&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;score bpm="60" beatspermeasure="4"&gt;
+  &lt;effects&gt;
+    &lt;effect name="noisegate" threshold="0.5" /&gt;
+    &lt;effect name="chorus" samplerate="44100" delay=".01" range=".8" rate="20" /&gt;
+    &lt;effect name="compression" threshold="0.5" ratio="0.25" attack="0.5" release="0.5" knee="0.5" /&gt;
+  &lt;/effects&gt;
+  &lt;instrument instrument="AdditiveSynthesis"&gt;
+    &lt;note measure="1" beat="1.00" duration="0.5" amplitudes="1 0.8 0.6 0.4" note="C4" ADSR=".2 .3 .5 .6"/&gt;
+    &lt;note measure="1" beat="1.50" duration="0.5" amplitudes="1 0.7 0.5 0.3" note="E4" ADSR=".1 .2 .2 .6"/&gt;
+    ...
+  &lt;/instrument&gt;
+  ...
+&lt;/score&gt;
+</code>
+</pre>
         <p>
-          Our approach augments neural radiance fields
-          (NeRF) by optimizing an
-          additional continuous volumetric deformation field that warps each observed point into a
-          canonical 5D NeRF.
-          We observe that these NeRF-like deformation fields are prone to local minima, and
-          propose a coarse-to-fine optimization method for coordinate-based models that allows for
-          more robust optimization.
-          By adapting principles from geometry processing and physical simulation to NeRF-like
-          models, we propose an elastic regularization of the deformation field that further
-          improves robustness.
+          As was the case in the synthie project, user specifies the instrument name in the instrument tag. In my case, there is only one instrument
+          "AdditiveSynthesis". Then in the subsequent notes, user can specify properties of the additive synthesis generation. These include
+          amplitudes of harmonics, ADSR profile values, vibrato rate and effect. In the effects tag, user can add effect subtag with its properties
+          out of compression, chorus and noisegate. Within the instrument, effect tag can specify the wet and dry effect send can be controlled by
+          given the name of the effect. More details can be found in the individual pages. 
+
         </p>
       </div>
     </div>
   </div>
-  </div>
-    <!--/ Abstract. -->
-
-    <!-- Paper video. -->
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Video</h2>
-        <div class="publication-video">
-          <iframe src="https://www.youtube.com/embed/MrKrnHhk8IA?rel=0&amp;showinfo=0"
-                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-        </div>
+  <div class="columns is-centered has-text-centered">
+    <div class="column is-four-fifths">
+      <h2 class="title is-3">Grading Elements</h2>
+      
+      </span>
+      <div class="content has-text-justified">
+        
+          <p>
+            <ul>
+            <li> 10 - Suitable length audio files and web site turned in.  &#x2705 </li>
+            <li> 20 - Audio file is recognizable as music in the opinion of the TA and Instructor. &#x2705 </li>
+            <li> 30 - Audio file utilizes all system components.  &#x2705 </li>
+            <li> 40 - Audio file utilizes all capabilities of all system components. &#x2705</li>
+            <li> 50 - The script has at least 240 notes in it  &#x2705 </li>
+          </ul>
+          </p>
+        </p>
       </div>
     </div>
-    <!--/ Paper video. -->
+  </div>
+  
+  </div>
   </div>
 </section>
 
