@@ -1,0 +1,77 @@
+﻿<score>
+    <instrument instrument="AdditiveSynthesis">
+        <!-- First Phrase: With Harmonies, ADSR, and Vibrato -->
+        <note measure="1" beat="1.00" duration="0.5" amplitudes="1 0.8 0.6 0.4" note="C4"
+            ADSR=".2 .4 .6 .3" vibrato="9.0 8.0" />
+        <note measure="1" beat="1.50" duration="0.5" amplitudes="1 0.7 0.5 0.3" note="E4"
+            ADSR=".2 .3 .5 .2" vibrato="9.0 8.0" />
+
+        <note measure="1" beat="2.00" duration="0.5" amplitudes="1 0.9 0.7 0.5" note="G4"
+            ADSR=".3 .4 .5 .3" vibrato="9.0 8.0" />
+        <note measure="1" beat="2.50" duration="0.5" amplitudes="1 0.6 0.4 0.2" note="B4"
+            ADSR=".2 .4 .4 .2" vibrato="9.0 8.0" />
+
+        <note measure="1" beat="3.00" duration="0.5" amplitudes="1 0.7 0.5 0.3" note="D5"
+            ADSR=".3 .5 .5 .4" vibrato="9.0 8.0" />
+        <note measure="1" beat="3.50" duration="0.5" amplitudes="1 0.8 0.6 0.4" note="F4"
+            ADSR=".2 .3 .5 .2" vibrato="9.0 8.0" />
+
+        <note measure="1" beat="4.00" duration="0.5" amplitudes="1 0.9 0.7 0.5" note="E5"
+            ADSR=".3 .4 .6 .4" vibrato="9.0 8.0" />
+        <note measure="1" beat="4.50" duration="0.5" amplitudes="1 0.6 0.4 0.2" note="C5"
+            ADSR=".2 .3 .5 .2" vibrato="9.0 8.0" />
+
+        <note measure="2" beat="1.00" duration="1.0" amplitudes="0 0 0" note="Rest" />
+
+        <!-- Second Phrase: Without Vibrato -->
+        <note measure="3" beat="1.00" duration="0.5" amplitudes="1 0.8 0.6 0.4" note="C4"
+            ADSR=".2 .3 .5 .6" />
+        <note measure="3" beat="1.50" duration="0.5" amplitudes="1 0.7 0.5 0.3" note="E4"
+            ADSR=".2 .3 .5 .6" />
+
+        <note measure="3" beat="2.00" duration="0.5" amplitudes="1 0.9 0.7 0.5" note="G4"
+            ADSR=".2 .3 .5 .6" />
+        <note measure="3" beat="2.50" duration="0.5" amplitudes="1 0.6 0.4 0.2" note="B4"
+            ADSR=".2 .3 .5 .6" />
+
+        <note measure="3" beat="3.00" duration="0.5" amplitudes="1 0.7 0.5 0.3" note="D5"
+            ADSR=".2 .3 .5 .6" />
+        <note measure="3" beat="3.50" duration="0.5" amplitudes="1 0.8 0.6 0.4" note="F4"
+            ADSR=".2 .3 .5 .6" />
+
+        <note measure="3" beat="4.00" duration="0.5" amplitudes="1 0.9 0.7 0.5" note="E5"
+            ADSR=".2 .3 .5 .6" />
+        <note measure="3" beat="4.50" duration="0.5" amplitudes="1 0.6 0.4 0.2" note="C5"
+            ADSR=".2 .3 .5 .6" />
+
+        <note measure="4" beat="1.00" duration="1.0" amplitudes="0 0 0" note="Rest" />
+
+        <!-- Third Phrase: Without ADSR and Vibrato -->
+        <note measure="5" beat="1.00" duration="0.5" amplitudes="1 0.8 0.6 0.4" note="C4" />
+        <note measure="5" beat="1.50" duration="0.5" amplitudes="1 0.7 0.5 0.3" note="E4" />
+
+        <note measure="5" beat="2.00" duration="0.5" amplitudes="1 0.9 0.7 0.5" note="G4" />
+        <note measure="5" beat="2.50" duration="0.5" amplitudes="1 0.6 0.4 0.2" note="B4" />
+
+        <note measure="5" beat="3.00" duration="0.5" amplitudes="1 0.7 0.5 0.3" note="D5" />
+        <note measure="5" beat="3.50" duration="0.5" amplitudes="1 0.8 0.6 0.4" note="F4" />
+
+        <note measure="5" beat="4.00" duration="0.5" amplitudes="1 0.9 0.7 0.5" note="E5" />
+        <note measure="5" beat="4.50" duration="0.5" amplitudes="1 0.6 0.4 0.2" note="C5" />
+
+        <note measure="6" beat="1.00" duration="1.0" amplitudes="0 0 0" note="Rest" />
+
+        <!-- Fourth Phrase: Reduced harmonics -->
+        <note measure="7" beat="1.00" duration="0.5" amplitudes="1 0.1" note="C4" />
+        <note measure="7" beat="1.50" duration="0.5" amplitudes="1 0.1" note="E4" />
+
+        <note measure="7" beat="2.00" duration="0.5" amplitudes="1 0.1" note="G4" />
+        <note measure="7" beat="2.50" duration="0.5" amplitudes="1 0.1" note="B4" />
+
+        <note measure="7" beat="3.00" duration="0.5" amplitudes="1 0.1" note="D5" />
+        <note measure="7" beat="3.50" duration="0.5" amplitudes="1 0.1" note="F4" />
+
+        <note measure="7" beat="4.00" duration="0.5" amplitudes="1 0.1" note="E5" />
+        <note measure="7" beat="4.50" duration="0.5" amplitudes="1 0.1" note="C5" />
+    </instrument>
+</score>

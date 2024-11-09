@@ -1,0 +1,500 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<score>
+    <effects>
+        <effect name="noisegate" threshold="0.3" />
+        <effect name="compression" threshold="0.8" ratio="50" attack="0.5" release="0.7" />
+        <effect name="chorus" samplerate="44100" delay=".009" range=".5" rate="4.0" />
+    </effects>
+
+    <instrument instrument="AdditiveSynthesis">
+
+        <effect which="noisegate" wet="0.25" dry="0.75" />
+        <effect which="compression" wet="0.9" dry="1.0" />
+        <effect which="chorus" wet="1.0" dry="0.9" />
+
+        <!-- THE START -->
+        <note measure="1" beat="1" duration="2" amplitudes="1.0 0.6 0.4 0.2" note="G4"
+            ADSR="0.5 0.5 0.8 1.0" />
+        <note measure="1" beat="3" duration="2" amplitudes="1.0 0.6 0.4 0.2" note="C5"
+            ADSR="0.5 0.5 0.8 1.0" />
+        <note measure="2" beat="1" duration="2" amplitudes="1.0 0.6 0.4 0.2" note="E5"
+            ADSR="0.5 0.5 0.8 1.0" />
+        <note measure="2" beat="3" duration="3" amplitudes="1.0 0.6 0.4 0.2" note="G5"
+            ADSR="0.5 0.5 0.8 1.0" />
+
+        <!-- Itsy bitsy spider -->
+        <note measure="3" beat="1" duration="0.5" amplitudes="1 .8 .6" note="G4"
+            ADSR="0.3 0.3 0.8 0.5" vibrato="5.0 5.0" />
+        <note measure="3" beat="1.5" duration="0.5" amplitudes="1 .7 .5" note="C5"
+            ADSR="0.3 0.2 0.9 0.4" vibrato="5.0 5.0" />
+        <note measure="3" beat="2" duration="0.5" amplitudes="1 .6 .4" note="C5"
+            ADSR="0.3 0.3 1.0 0.5" vibrato="5.0 5.0" />
+        <note measure="3" beat="2.5" duration="0.5" amplitudes="1 .6 .4" note="C5"
+            ADSR="0.3 0.3 1.0 0.5" vibrato="5.0 5.0" />
+        <note measure="3" beat="3" duration="0.5" amplitudes="1 .8 .6" note="D5"
+            ADSR="0.2 0.3 0.7 0.5" vibrato="5.0 5.0" />
+        <note measure="3" beat="3.5" duration="0.5" amplitudes="1 .7 .5" note="E5"
+            ADSR="0.3 0.2 0.9 0.4" vibrato="5.0 5.0" />
+        <note measure="3" beat="4" duration="0.5" amplitudes="1 .7 .5" note="E5"
+            ADSR="0.3 0.2 0.9 0.4" vibrato="5.0 5.0" />
+
+        <!-- "Climbed up the water spout" -->
+        <note measure="4" beat="1" duration="0.5" amplitudes="1 .8 .6" note="E5"
+            ADSR="0.3 0.3 0.8 0.5" vibrato="5.0 5.0" />
+        <note measure="4" beat="1.5" duration="0.5" amplitudes="1 .7 .5" note="D5"
+            ADSR="0.3 0.2 0.9 0.4" vibrato="5.0 5.0" />
+        <note measure="4" beat="2" duration="0.5" amplitudes="1 .6 .4" note="C5"
+            ADSR="0.3 0.3 1.0 0.5" vibrato="5.0 5.0" />
+        <note measure="4" beat="2.5" duration="0.5" amplitudes="1 .8 .6" note="D5"
+            ADSR="0.2 0.3 0.7 0.5" vibrato="5.0 5.0" />
+        <note measure="4" beat="3" duration="0.5" amplitudes="1 .7 .5" note="E5"
+            ADSR="0.3 0.2 0.9 0.4" vibrato="5.0 5.0" />
+        <note measure="4" beat="3.5" duration="0.5" amplitudes="1 .7 .5" note="C5"
+            ADSR="0.3 0.2 0.9 0.4" vibrato="5.0 5.0" />
+
+        <!-- "Down came the rain" -->
+        <note measure="5" beat="1" duration="0.5" amplitudes="1 .8 .6" note="E5"
+            ADSR="0.3 0.3 0.8 0.5" vibrato="5.0 5.0" />
+        <note measure="5" beat="1.5" duration="0.5" amplitudes="1 .7 .5" note="E5"
+            ADSR="0.3 0.2 0.9 0.4" vibrato="5.0 5.0" />
+        <note measure="5" beat="2" duration="0.5" amplitudes="1 .6 .4" note="F5"
+            ADSR="0.3 0.3 1.0 0.5" vibrato="5.0 5.0" />
+        <note measure="5" beat="2.5" duration="0.75" amplitudes="1 .8 .6" note="G5"
+            ADSR="0.2 0.3 0.7 0.5" vibrato="5.0 5.0" />
+
+        <!-- "And washed the spider out" -->
+        <note measure="6" beat="1" duration="0.5" amplitudes="1 .8 .6" note="G5"
+            ADSR="0.3 0.3 0.8 0.5" vibrato="5.0 5.0" />
+        <note measure="6" beat="1.5" duration="0.5" amplitudes="1 .7 .5" note="F5"
+            ADSR="0.3 0.2 0.9 0.4" vibrato="5.0 5.0" />
+        <note measure="6" beat="2" duration="0.5" amplitudes="1 .6 .4" note="E5"
+            ADSR="0.3 0.3 1.0 0.5" vibrato="5.0 5.0" />
+        <note measure="6" beat="2.5" duration="0.5" amplitudes="1 .8 .6" note="F5"
+            ADSR="0.2 0.3 0.7 0.5" vibrato="5.0 5.0" />
+        <note measure="6" beat="3" duration="0.5" amplitudes="1 .7 .5" note="G5"
+            ADSR="0.3 0.2 0.9 0.4" vibrato="5.0 5.0" />
+        <note measure="6" beat="3.5" duration="0.5" amplitudes="1 .7 .5" note="E5"
+            ADSR="0.3 0.2 0.9 0.4" vibrato="5.0 5.0" />
+
+        <!-- "Out came the sun" -->
+        <note measure="7" beat="1" duration="0.5" amplitudes="1 .8 .6" note="C5"
+            ADSR="0.3 0.3 0.8 0.5" vibrato="5.0 5.0" />
+        <note measure="7" beat="1.5" duration="0.5" amplitudes="1 .7 .5" note="C5"
+            ADSR="0.3 0.2 0.9 0.4" vibrato="5.0 5.0" />
+        <note measure="7" beat="2" duration="0.5" amplitudes="1 .6 .4" note="D5"
+            ADSR="0.3 0.3 1.0 0.5" vibrato="5.0 5.0" />
+        <note measure="7" beat="2.5" duration="0.75" amplitudes="1 .8 .6" note="E5"
+            ADSR="0.2 0.3 0.7 0.5" vibrato="5.0 5.0" />
+
+        <!-- "And dried up all the rain" -->
+        <note measure="8" beat="1" duration="0.5" amplitudes="1 .8 .6" note="E5"
+            ADSR="0.3 0.3 0.8 0.5" vibrato="5.0 5.0" />
+        <note measure="8" beat="1.5" duration="0.5" amplitudes="1 .7 .5" note="D5"
+            ADSR="0.3 0.2 0.9 0.4" vibrato="5.0 5.0" />
+        <note measure="8" beat="2" duration="0.5" amplitudes="1 .6 .4" note="C5"
+            ADSR="0.3 0.3 1.0 0.5" vibrato="5.0 5.0" />
+        <note measure="8" beat="2.5" duration="0.5" amplitudes="1 .8 .6" note="D5"
+            ADSR="0.2 0.3 0.7 0.5" vibrato="5.0 5.0" />
+        <note measure="8" beat="3" duration="0.5" amplitudes="1 .7 .5" note="E5"
+            ADSR="0.3 0.2 0.9 0.4" vibrato="5.0 5.0" />
+        <note measure="8" beat="3.5" duration="0.5" amplitudes="1 .7 .5" note="C5"
+            ADSR="0.3 0.2 0.9 0.4" vibrato="5.0 5.0" />
+
+        <!-- "And the itsy-bitsy spider" -->
+        <note measure="9" beat="1" duration="0.5" amplitudes="1 .8 .6" note="G4"
+            ADSR="0.3 0.3 0.8 0.5" vibrato="5.0 5.0" />
+        <note measure="9" beat="1.5" duration="0.5" amplitudes="1 .8 .6" note="G4"
+            ADSR="0.3 0.3 0.8 0.5" vibrato="5.0 5.0" />
+        <note measure="9" beat="2.0" duration="0.5" amplitudes="1 .7 .5" note="C5"
+            ADSR="0.3 0.2 0.9 0.4" vibrato="5.0 5.0" />
+        <note measure="9" beat="2.5" duration="0.5" amplitudes="1 .6 .4" note="C5"
+            ADSR="0.3 0.3 1.0 0.5" vibrato="5.0 5.0" />
+        <note measure="9" beat="3.0" duration="0.5" amplitudes="1 .6 .4" note="C5"
+            ADSR="0.3 0.3 1.0 0.5" vibrato="5.0 5.0" />
+        <note measure="9" beat="3.5" duration="0.5" amplitudes="1 .8 .6" note="D5"
+            ADSR="0.2 0.3 0.7 0.5" vibrato="5.0 5.0" />
+        <note measure="9" beat="4" duration="0.5" amplitudes="1 .7 .5" note="E5"
+            ADSR="0.3 0.2 0.9 0.4" vibrato="5.0 5.0" />
+        <note measure="9" beat="4.5" duration="0.75" amplitudes="1 .7 .5" note="E5"
+            ADSR="0.3 0.2 0.9 0.4" vibrato="5.0 5.0" />
+
+        <!-- "Climbed up the spout again!" -->
+        <note measure="10" beat="1" duration="0.5" amplitudes="1 .8 .6" note="E5"
+            ADSR="0.3 0.3 0.8 0.5" vibrato="5.0 5.0" />
+        <note measure="10" beat="1.5" duration="0.5" amplitudes="1 .7 .5" note="D5"
+            ADSR="0.3 0.2 0.9 0.4" vibrato="5.0 5.0" />
+        <note measure="10" beat="2" duration="0.5" amplitudes="1 .6 .4" note="C5"
+            ADSR="0.3 0.3 1.0 0.5" vibrato="5.0 5.0" />
+        <note measure="10" beat="2.5" duration="0.5" amplitudes="1 .8 .6" note="D5"
+            ADSR="0.2 0.3 0.7 0.5" vibrato="5.0 5.0" />
+        <note measure="10" beat="3" duration="0.5" amplitudes="1 .7 .5" note="E5"
+            ADSR="0.3 0.2 0.9 0.4" vibrato="5.0 5.0" />
+        <note measure="10" beat="3.5" duration="0.5" amplitudes="1 .7 .5" note="C5"
+            ADSR="0.3 0.2 0.9 0.4" vibrato="5.0 5.0" />
+
+        <!-- Twinkle Twinkle little star -->
+        <!-- Measure 1: C  C  G  G  A  A  G -->
+        <note measure="11" beat="1.00" duration="0.75" amplitudes="1 .8 .0 .6 .0 .4 .0 .2" note="C4"
+            vibrato="3.0 3.0" />
+        <note measure="11" beat="1.50" duration="0.5" amplitudes="1 .8 .0 .6 .0 .4 .0 .2" note="C4"
+            vibrato="3.0 3.0" />
+        <note measure="11" beat="2.00" duration="0.5" amplitudes="1 .8 .0 .6 .0 .4 .0 .2" note="G4"
+            vibrato="3.0 3.0" />
+        <note measure="11" beat="2.50" duration="0.5" amplitudes="1 .8 .0 .6 .0 .4 .0 .2" note="G4"
+            vibrato="3.0 3.0" />
+        <note measure="11" beat="3.00" duration="0.5" amplitudes="1 .8 .0 .6 .0 .4 .0 .2" note="A4"
+            vibrato="3.0 3.0" />
+        <note measure="11" beat="3.50" duration="0.5" amplitudes="1 .8 .0 .6 .0 .4 .0 .2" note="A4"
+            vibrato="3.0 3.0" />
+        <note measure="11" beat="4.00" duration="1.0" amplitudes="1 .8 .0 .6 .0 .4 .0 .2" note="G4"
+            vibrato="3.0 3.0" />
+
+        <!-- How I wonder what you are -->
+        <!-- Measure 2: F  F  E  E  D  D  C -->
+        <note measure="12" beat="1.00" duration="0.5" amplitudes="1 .8 .0 .6 .0 .4 .0 .2" note="F4"
+            vibrato="3.0 3.0" />
+        <note measure="12" beat="1.50" duration="0.5" amplitudes="1 .8 .0 .6 .0 .4 .0 .2" note="F4"
+            vibrato="3.0 3.0" />
+        <note measure="12" beat="2.00" duration="0.5" amplitudes="1 .8 .0 .6 .0 .4 .0 .2" note="E4"
+            vibrato="3.0 3.0" />
+        <note measure="12" beat="2.50" duration="0.5" amplitudes="1 .8 .0 .6 .0 .4 .0 .2" note="E4"
+            vibrato="3.0 3.0" />
+        <note measure="12" beat="3.00" duration="0.5" amplitudes="1 .8 .0 .6 .0 .4 .0 .2" note="D4"
+            vibrato="3.0 3.0" />
+        <note measure="12" beat="3.50" duration="0.5" amplitudes="1 .8 .0 .6 .0 .4 .0 .2" note="D4"
+            vibrato="3.0 3.0" />
+        <note measure="12" beat="4.00" duration="1.0" amplitudes="1 .8 .0 .6 .0 .4 .0 .2" note="C4"
+            vibrato="3.0 3.0" />
+
+        <!-- Up above the world so high -->
+        <!-- Measure 3: G  G  F  F  E  E  D -->
+        <note measure="13" beat="1.00" duration="0.5" amplitudes="1 .8 .0 .6 .0 .4 .0 .2" note="G4"
+            vibrato="3.0 3.0" />
+        <note measure="13" beat="1.50" duration="0.5" amplitudes="1 .8 .0 .6 .0 .4 .0 .2" note="G4"
+            vibrato="3.0 3.0" />
+        <note measure="13" beat="2.00" duration="0.5" amplitudes="1 .8 .0 .6 .0 .4 .0 .2" note="F4"
+            vibrato="3.0 3.0" />
+        <note measure="13" beat="2.50" duration="0.5" amplitudes="1 .8 .0 .6 .0 .4 .0 .2" note="F4"
+            vibrato="3.0 3.0" />
+        <note measure="13" beat="3.00" duration="0.5" amplitudes="1 .8 .0 .6 .0 .4 .0 .2" note="E4"
+            vibrato="3.0 3.0" />
+        <note measure="13" beat="3.50" duration="0.5" amplitudes="1 .8 .0 .6 .0 .4 .0 .2" note="E4"
+            vibrato="3.0 3.0" />
+        <note measure="13" beat="4.00" duration="1.0" amplitudes="1 .8 .0 .6 .0 .4 .0 .2" note="D4"
+            vibrato="3.0 3.0" />
+
+        <!-- Like a diamond in the sky -->
+        <!-- Measure 4: G  G  F  F  E  E  D -->
+        <note measure="14" beat="1.00" duration="0.5" amplitudes="1 .8 .0 .6 .0 .4 .0 .2" note="G4"
+            vibrato="3.0 3.0" />
+        <note measure="14" beat="1.50" duration="0.5" amplitudes="1 .8 .0 .6 .0 .4 .0 .2" note="G4"
+            vibrato="3.0 3.0" />
+        <note measure="14" beat="2.00" duration="0.5" amplitudes="1 .8 .0 .6 .0 .4 .0 .2" note="F4"
+            vibrato="3.0 3.0" />
+        <note measure="14" beat="2.50" duration="0.5" amplitudes="1 .8 .0 .6 .0 .4 .0 .2" note="F4"
+            vibrato="3.0 3.0" />
+        <note measure="14" beat="3.00" duration="0.5" amplitudes="1 .8 .0 .6 .0 .4 .0 .2" note="E4"
+            vibrato="3.0 3.0" />
+        <note measure="14" beat="3.50" duration="0.5" amplitudes="1 .8 .0 .6 .0 .4 .0 .2" note="E4"
+            vibrato="3.0 3.0" />
+        <note measure="14" beat="4.00" duration="1.0" amplitudes="1 .8 .0 .6 .0 .4 .0 .2" note="D4"
+            vibrato="3.0 3.0" />
+
+        <!-- Twinkle Twinkle little star -->
+        <!-- Measure 5: C  C  G  G  A  A  G -->
+        <note measure="15" beat="1.00" duration="0.5" amplitudes="1 .8 .0 .6 .0 .4 .0 .2" note="C4"
+            vibrato="3.0 3.0" />
+        <note measure="15" beat="1.50" duration="0.5" amplitudes="1 .8 .0 .6 .0 .4 .0 .2" note="C4"
+            vibrato="3.0 3.0" />
+        <note measure="15" beat="2.00" duration="0.5" amplitudes="1 .8 .0 .6 .0 .4 .0 .2" note="G4"
+            vibrato="3.0 3.0" />
+        <note measure="15" beat="2.50" duration="0.5" amplitudes="1 .8 .0 .6 .0 .4 .0 .2" note="G4"
+            vibrato="3.0 3.0" />
+        <note measure="15" beat="3.00" duration="0.5" amplitudes="1 .8 .0 .6 .0 .4 .0 .2" note="A4"
+            vibrato="3.0 3.0" />
+        <note measure="15" beat="3.50" duration="0.5" amplitudes="1 .8 .0 .6 .0 .4 .0 .2" note="A4"
+            vibrato="3.0 3.0" />
+        <note measure="15" beat="4.00" duration="1.0" amplitudes="1 .8 .0 .6 .0 .4 .0 .2" note="G4"
+            vibrato="3.0 3.0" />
+
+        <!-- How I wonder what you are -->
+        <!-- Measure 6: F  F  E  E  D  D  C -->
+        <note measure="16" beat="1.00" duration="0.5" amplitudes="1 .8 .0 .6 .0 .4 .0 .2" note="F4"
+            vibrato="3.0 3.0" />
+        <note measure="16" beat="1.50" duration="0.5" amplitudes="1 .8 .0 .6 .0 .4 .0 .2" note="F4"
+            vibrato="3.0 3.0" />
+        <note measure="16" beat="2.00" duration="0.5" amplitudes="1 .8 .0 .6 .0 .4 .0 .2" note="E4"
+            vibrato="3.0 3.0" />
+        <note measure="16" beat="2.50" duration="0.5" amplitudes="1 .8 .0 .6 .0 .4 .0 .2" note="E4"
+            vibrato="3.0 3.0" />
+        <note measure="16" beat="3.00" duration="0.5" amplitudes="1 .8 .0 .6 .0 .4 .0 .2" note="D4"
+            vibrato="3.0 3.0" />
+        <note measure="16" beat="3.50" duration="0.5" amplitudes="1 .8 .0 .6 .0 .4 .0 .2" note="D4"
+            vibrato="3.0 3.0" />
+        <note measure="16" beat="4.00" duration="1.0" amplitudes="1 .8 .0 .6 .0 .4 .0 .2" note="C4"
+            vibrato="3.0 3.0" />
+
+        <!-- OLD MAC -->
+        <!-- "Old MacDonald had a farm" -->
+        <note measure="17" beat="1" duration="0.5" amplitudes="1 .8 .6" note="G4"
+            ADSR="0.2 0.3 0.8 0.5" vibrato="1.5 1.0" />
+        <note measure="17" beat="1.5" duration="0.5" amplitudes="1 .7 .5" note="G4"
+            ADSR="0.3 0.2 0.9 0.4" vibrato="1.5 1.0" />
+        <note measure="17" beat="2" duration="0.5" amplitudes="1 .6 .4" note="G4"
+            ADSR="0.3 0.3 1.0 0.5" vibrato="1.5 1.0" />
+        <note measure="17" beat="2.5" duration="0.5" amplitudes="1 .8 .6" note="D4"
+            ADSR="0.2 0.3 0.7 0.5" vibrato="1.5 1.0" />
+        <note measure="17" beat="3" duration="0.5" amplitudes="1 .7 .5" note="E4"
+            ADSR="0.3 0.2 0.9 0.4" vibrato="1.5 1.0" />
+        <note measure="17" beat="3.5" duration="0.5" amplitudes="1 .8 .6" note="E4"
+            ADSR="0.3 0.2 0.8 0.4" vibrato="1.5 1.0" />
+        <note measure="17" beat="4" duration="0.5" amplitudes="1 .7 .5" note="D4"
+            ADSR="0.3 0.2 0.9 0.4" vibrato="1.5 1.0" />
+
+        <!-- "E - I - E - I - O!" -->
+        <note measure="18" beat="1" duration="0.5" amplitudes="1 .8 .6" note="B4"
+            ADSR="0.3 0.3 0.8 0.5" vibrato="1.5 1.0" />
+        <note measure="18" beat="1.5" duration="0.5" amplitudes="1 .7 .5" note="B4"
+            ADSR="0.3 0.2 0.9 0.4" vibrato="1.5 1.0" />
+        <note measure="18" beat="2" duration="0.5" amplitudes="1 .6 .4" note="A4"
+            ADSR="0.3 0.3 1.0 0.5" vibrato="1.5 1.0" />
+        <note measure="18" beat="2.5" duration="0.5" amplitudes="1 .8 .6" note="A4"
+            ADSR="0.2 0.3 0.7 0.5" vibrato="1.5 1.0" />
+        <note measure="18" beat="3" duration="0.5" amplitudes="1 .7 .5" note="G4"
+            ADSR="0.3 0.2 0.9 0.4" vibrato="1.5 1.0" />
+
+        <!-- "And on that farm he had a cow" -->
+        <note measure="19" beat="1" duration="0.5" amplitudes="1 .8 .6" note="D4"
+            ADSR="0.3 0.3 0.8 0.5" vibrato="1.5 1.0" />
+        <note measure="19" beat="1.5" duration="0.5" amplitudes="1 .7 .5" note="G4"
+            ADSR="0.3 0.2 0.9 0.4" vibrato="1.5 1.0" />
+        <note measure="19" beat="2" duration="0.5" amplitudes="1 .6 .4" note="G4"
+            ADSR="0.3 0.3 1.0 0.5" vibrato="1.5 1.0" />
+        <note measure="19" beat="2.5" duration="0.5" amplitudes="1 .8 .6" note="G4"
+            ADSR="0.2 0.3 0.7 0.5" vibrato="1.5 1.0" />
+        <note measure="19" beat="3" duration="0.5" amplitudes="1 .7 .5" note="D4"
+            ADSR="0.3 0.2 0.9 0.4" vibrato="1.5 1.0" />
+        <note measure="19" beat="3.5" duration="0.5" amplitudes="1 .8 .6" note="E4"
+            ADSR="0.3 0.2 0.8 0.4" vibrato="1.5 1.0" />
+        <note measure="19" beat="4.0" duration="0.5" amplitudes="1 .8 .6" note="E4"
+            ADSR="0.3 0.2 0.8 0.4" vibrato="1.5 1.0" />
+        <note measure="19" beat="4.5" duration="0.5" amplitudes="1 .7 .5" note="D4"
+            ADSR="0.3 0.2 0.9 0.4" vibrato="1.5 1.0" />
+
+        <!-- "E - I - E - I - O!" -->
+        <note measure="20" beat="1" duration="0.5" amplitudes="1 .8 .6" note="B4"
+            ADSR="0.3 0.3 0.8 0.5" vibrato="1.5 1.0" />
+        <note measure="20" beat="1.5" duration="0.5" amplitudes="1 .7 .5" note="B4"
+            ADSR="0.3 0.2 0.9 0.4" vibrato="1.5 1.0" />
+        <note measure="20" beat="2" duration="0.5" amplitudes="1 .6 .4" note="A4"
+            ADSR="0.3 0.3 1.0 0.5" vibrato="1.5 1.0" />
+        <note measure="20" beat="2.5" duration="0.5" amplitudes="1 .8 .6" note="A4"
+            ADSR="0.2 0.3 0.7 0.5" vibrato="1.5 1.0" />
+        <note measure="20" beat="3" duration="0.5" amplitudes="1 .7 .5" note="G4"
+            ADSR="0.3 0.2 0.9 0.4" vibrato="1.5 1.0" />
+
+        <!-- "With a moo moo here" -->
+        <note measure="21" beat="1" duration="0.5" amplitudes="1 .8 .6" note="D4"
+            ADSR="0.3 0.3 0.8 0.5" vibrato="1.5 1.0" />
+        <note measure="21" beat="1.5" duration="0.5" amplitudes="1 .7 .5" note="D4"
+            ADSR="0.3 0.2 0.9 0.4" vibrato="1.5 1.0" />
+        <note measure="21" beat="2" duration="0.5" amplitudes="1 .6 .4" note="G4"
+            ADSR="0.3 0.3 1.0 0.5" vibrato="1.5 1.0" />
+        <note measure="21" beat="2.5" duration="0.5" amplitudes="1 .8 .6" note="G4"
+            ADSR="0.2 0.3 0.7 0.5" vibrato="1.5 1.0" />
+        <note measure="21" beat="3" duration="0.5" amplitudes="1 .7 .5" note="G4"
+            ADSR="0.3 0.2 0.9 0.4" vibrato="1.5 1.0" />
+
+        <!-- "And a moo moo there" -->
+        <note measure="22" beat="1" duration="0.5" amplitudes="1 .8 .6" note="D4"
+            ADSR="0.3 0.3 0.8 0.5" vibrato="1.5 1.0" />
+        <note measure="22" beat="1.5" duration="0.5" amplitudes="1 .7 .5" note="D4"
+            ADSR="0.3 0.2 0.9 0.4" vibrato="1.5 1.0" />
+        <note measure="22" beat="2" duration="0.5" amplitudes="1 .6 .4" note="G4"
+            ADSR="0.3 0.3 1.0 0.5" vibrato="1.5 1.0" />
+        <note measure="22" beat="2.5" duration="0.5" amplitudes="1 .8 .6" note="G4"
+            ADSR="0.2 0.3 0.7 0.5" vibrato="1.5 1.0" />
+        <note measure="22" beat="3" duration="0.5" amplitudes="1 .7 .5" note="G4"
+            ADSR="0.3 0.2 0.9 0.4" vibrato="1.5 1.0" />
+
+        <!-- "Here a moo" -->
+        <note measure="23" beat="1" duration="0.5" amplitudes="1 .8 .6" note="G4"
+            ADSR="0.3 0.3 0.8 0.5" vibrato="1.5 1.0" />
+        <note measure="23" beat="1.5" duration="0.5" amplitudes="1 .7 .5" note="G4"
+            ADSR="0.3 0.2 0.9 0.4" vibrato="1.5 1.0" />
+        <note measure="23" beat="2" duration="0.5" amplitudes="1 .6 .4" note="G4"
+            ADSR="0.3 0.3 1.0 0.5" vibrato="1.5 1.0" />
+
+        <!-- "There a moo" -->
+        <note measure="23" beat="2.5" duration="0.5" amplitudes="1 .8 .6" note="G4"
+            ADSR="0.2 0.3 0.7 0.5" vibrato="1.5 1.0" />
+        <note measure="23" beat="3" duration="0.5" amplitudes="1 .7 .5" note="G4"
+            ADSR="0.3 0.2 0.9 0.4" vibrato="1.5 1.0" />
+
+        <!-- "Everywhere a moo moo" -->
+        <note measure="24" beat="1" duration="0.5" amplitudes="1 .8 .6" note="G4"
+            ADSR="0.3 0.3 0.8 0.5" vibrato="1.5 1.0" />
+        <note measure="24" beat="1.5" duration="0.5" amplitudes="1 .7 .5" note="G4"
+            ADSR="0.3 0.2 0.9 0.4" vibrato="1.5 1.0" />
+        <note measure="24" beat="2" duration="0.5" amplitudes="1 .6 .4" note="G4"
+            ADSR="0.3 0.3 1.0 0.5" vibrato="1.5 1.0" />
+        <note measure="24" beat="2.5" duration="0.5" amplitudes="1 .8 .6" note="G4"
+            ADSR="0.2 0.3 0.7 0.5" vibrato="1.5 1.0" />
+        <note measure="24" beat="3" duration="0.5" amplitudes="1 .7 .5" note="G4"
+            ADSR="0.3 0.2 0.9 0.4" vibrato="1.5 1.0" />
+
+        <!-- "Old MacDonald had a farm" -->
+        <note measure="25" beat="1" duration="0.5" amplitudes="1 .8 .6" note="G4"
+            ADSR="0.3 0.3 0.8 0.5" vibrato="1.5 1.0" />
+        <note measure="25" beat="1.5" duration="0.5" amplitudes="1 .7 .5" note="G4"
+            ADSR="0.3 0.2 0.9 0.4" vibrato="1.5 1.0" />
+        <note measure="25" beat="2" duration="0.5" amplitudes="1 .6 .4" note="D4"
+            ADSR="0.3 0.3 1.0 0.5" vibrato="1.5 1.0" />
+        <note measure="25" beat="2.5" duration="0.5" amplitudes="1 .8 .6" note="E4"
+            ADSR="0.2 0.3 0.7 0.5" vibrato="1.5 1.0" />
+        <note measure="25" beat="3" duration="0.5" amplitudes="1 .7 .5" note="E4"
+            ADSR="0.3 0.2 0.9 0.4" vibrato="1.5 1.0" />
+        <note measure="25" beat="3.5" duration="0.5" amplitudes="1 .8 .6" note="D4"
+            ADSR="0.3 0.2 0.8 0.4" vibrato="1.5 1.0" />
+
+        <!-- "E - I - E - I - O!" -->
+        <note measure="26" beat="1" duration="0.5" amplitudes="1 .8 .6" note="B4"
+            ADSR="0.3 0.3 0.8 0.5" vibrato="1.5 1.0" />
+        <note measure="26" beat="1.5" duration="0.5" amplitudes="1 .7 .5" note="B4"
+            ADSR="0.3 0.2 0.9 0.4" vibrato="1.5 1.0" />
+        <note measure="26" beat="2" duration="0.5" amplitudes="1 .6 .4" note="A4"
+            ADSR="0.3 0.3 1.0 0.5" vibrato="1.5 1.0" />
+        <note measure="26" beat="2.5" duration="0.5" amplitudes="1 .8 .6" note="A4"
+            ADSR="0.2 0.3 0.7 0.5" vibrato="1.5 1.0" />
+        <note measure="26" beat="3" duration="0.5" amplitudes="1 .7 .5" note="G4"
+            ADSR="0.3 0.2 0.9 0.4" vibrato="1.5 1.0" />
+
+
+        <!-- "Mary had a little lamb" -->
+        <note measure="27" beat="1" duration="0.5" amplitudes="1 .8 .6" note="A4"
+            ADSR="0.2 0.3 0.8 0.5" vibrato="1.0 0.75" />
+        <note measure="27" beat="1.5" duration="0.5" amplitudes="1 .7 .5" note="G4"
+            ADSR="0.3 0.2 0.9 0.4" vibrato="1.0 0.75" />
+        <note measure="27" beat="2" duration="0.5" amplitudes="1 .6 .4" note="F4"
+            ADSR="0.3 0.3 1.0 0.5" vibrato="1.0 0.75" />
+        <note measure="27" beat="2.5" duration="0.5" amplitudes="1 .8 .6" note="G4"
+            ADSR="0.2 0.3 0.7 0.5" vibrato="1.0 0.75" />
+        <note measure="27" beat="3" duration="0.5" amplitudes="1 .7 .5" note="A4"
+            ADSR="0.3 0.2 0.9 0.4" vibrato="1.0 0.75" />
+        <note measure="27" beat="3.5" duration="0.5" amplitudes="1 .8 .6" note="A4"
+            ADSR="0.3 0.2 0.8 0.4" vibrato="1.0 0.75" />
+
+        <!-- "Little lamb, little lamb" -->
+        <note measure="28" beat="1" duration="0.5" amplitudes="1 .8 .6" note="G4"
+            ADSR="0.3 0.3 0.8 0.5" vibrato="1.0 0.75" />
+        <note measure="28" beat="1.5" duration="0.5" amplitudes="1 .7 .5" note="G4"
+            ADSR="0.3 0.2 0.9 0.4" vibrato="1.0 0.75" />
+        <note measure="28" beat="2" duration="0.5" amplitudes="1 .6 .4" note="G4"
+            ADSR="0.3 0.3 1.0 0.5" vibrato="1.0 0.75" />
+        <note measure="28" beat="2.5" duration="0.5" amplitudes="1 .8 .6" note="A4"
+            ADSR="0.3 0.3 0.8 0.5" vibrato="1.0 0.75" />
+        <note measure="28" beat="3" duration="0.5" amplitudes="1 .7 .5" note="C5"
+            ADSR="0.4 0.3 0.9 0.5" vibrato="1.0 0.75" />
+        <note measure="28" beat="3.5" duration="0.5" amplitudes="1 .8 .6" note="C5"
+            ADSR="0.4 0.2 0.9 0.5" vibrato="1.0 0.75" />
+
+        <!-- "Mary had a little lamb" -->
+        <note measure="29" beat="1" duration="0.5" amplitudes="1 .8 .6" note="A4"
+            ADSR="0.2 0.3 0.8 0.5" vibrato="1.0 0.75" />
+        <note measure="29" beat="1.5" duration="0.5" amplitudes="1 .7 .5" note="G4"
+            ADSR="0.3 0.2 0.9 0.4" vibrato="1.0 0.75" />
+        <note measure="29" beat="2" duration="0.5" amplitudes="1 .6 .4" note="F4"
+            ADSR="0.3 0.3 1.0 0.5" vibrato="1.0 0.75" />
+        <note measure="29" beat="2.5" duration="0.5" amplitudes="1 .8 .6" note="G4"
+            ADSR="0.2 0.3 0.7 0.5" vibrato="1.0 0.75" />
+        <note measure="29" beat="3" duration="0.5" amplitudes="1 .7 .5" note="A4"
+            ADSR="0.3 0.2 0.9 0.4" vibrato="1.0 0.75" />
+        <note measure="29" beat="3.5" duration="0.5" amplitudes="1 .8 .6" note="A4"
+            ADSR="0.3 0.2 0.8 0.4" vibrato="1.0 0.75" />
+        <note measure="29" beat="4.0" duration="0.5" amplitudes="1 .8 .6" note="A4"
+            ADSR="0.3 0.2 0.8 0.4" vibrato="1.0 0.75" />
+
+        <!-- "Its fleece was white as snow" -->
+        <note measure="30" beat="1" duration="0.5" amplitudes="1 .8 .6" note="A4"
+            ADSR="0.3 0.3 0.8 0.5" vibrato="1.0 0.75" />
+        <note measure="30" beat="1.5" duration="0.5" amplitudes="1 .7 .5" note="G4"
+            ADSR="0.3 0.2 0.9 0.4" vibrato="1.0 0.75" />
+        <note measure="30" beat="2" duration="0.5" amplitudes="1 .6 .4" note="G4"
+            ADSR="0.3 0.3 1.0 0.5" vibrato="1.0 0.75" />
+        <note measure="30" beat="2.5" duration="0.5" amplitudes="1 .8 .6" note="A4"
+            ADSR="0.3 0.3 0.8 0.5" vibrato="1.0 0.75" />
+        <note measure="30" beat="3.0" duration="0.5" amplitudes="1 .8 .6" note="G4"
+            ADSR="0.2 0.3 0.7 0.5" vibrato="1.0 0.75" />
+        <note measure="30" beat="3.5" duration="0.5" amplitudes="1 .7 .5" note="F4"
+            ADSR="0.3 0.3 0.8 0.5" vibrato="1.0 0.75" />
+
+        <!-- "And everywhere that Mary went" -->
+        <note measure="31" beat="1" duration="0.5" amplitudes="1 .8 .6" note="F4"
+            ADSR="0.3 0.3 0.8 0.5" vibrato="1.0 0.75" />
+        <note measure="31" beat="1.5" duration="0.5" amplitudes="1 .7 .5" note="A4"
+            ADSR="0.3 0.2 0.9 0.4" vibrato="1.0 0.75" />
+        <note measure="31" beat="2" duration="0.5" amplitudes="1 .6 .4" note="G4"
+            ADSR="0.3 0.3 1.0 0.5" vibrato="1.0 0.75" />
+        <note measure="31" beat="2.5" duration="0.5" amplitudes="1 .8 .6" note="F4"
+            ADSR="0.2 0.3 0.7 0.5" vibrato="1.0 0.75" />
+        <note measure="31" beat="3" duration="0.5" amplitudes="1 .7 .5" note="G4"
+            ADSR="0.3 0.2 0.9 0.4" vibrato="1.0 0.75" />
+        <note measure="31" beat="3.5" duration="0.5" amplitudes="1 .8 .6" note="A4"
+            ADSR="0.3 0.2 0.8 0.4" vibrato="1.0 0.75" />
+
+        <!-- "Mary went, Mary went" -->
+        <note measure="32" beat="1" duration="0.5" amplitudes="1 .8 .6" note="G4"
+            ADSR="0.3 0.3 0.8 0.5" vibrato="1.0 0.75" />
+        <note measure="32" beat="1.5" duration="0.5" amplitudes="1 .7 .5" note="G4"
+            ADSR="0.3 0.2 0.9 0.4" vibrato="1.0 0.75" />
+        <note measure="32" beat="2" duration="0.5" amplitudes="1 .6 .4" note="A4"
+            ADSR="0.3 0.3 1.0 0.5" vibrato="1.0 0.75" />
+        <note measure="32" beat="2.5" duration="0.5" amplitudes="1 .8 .6" note="C5"
+            ADSR="0.2 0.3 0.7 0.5" vibrato="1.0 0.75" />
+        <note measure="32" beat="3" duration="0.5" amplitudes="1 .7 .5" note="C5"
+            ADSR="0.3 0.2 0.9 0.4" vibrato="1.0 0.75" />
+
+        <!-- "Everywhere that Mary went" -->
+        <note measure="33" beat="1" duration="0.5" amplitudes="1 .8 .6" note="A4"
+            ADSR="0.3 0.3 0.8 0.5" vibrato="1.0 0.75" />
+        <note measure="33" beat="1.5" duration="0.5" amplitudes="1 .7 .5" note="G4"
+            ADSR="0.3 0.2 0.9 0.4" vibrato="1.0 0.75" />
+        <note measure="33" beat="2" duration="0.5" amplitudes="1 .6 .4" note="F4"
+            ADSR="0.3 0.3 1.0 0.5" vibrato="1.0 0.75" />
+        <note measure="33" beat="2.5" duration="0.5" amplitudes="1 .8 .6" note="G4"
+            ADSR="0.2 0.3 0.7 0.5" vibrato="1.0 0.75" />
+        <note measure="33" beat="3" duration="0.5" amplitudes="1 .7 .5" note="A4"
+            ADSR="0.3 0.2 0.9 0.4" vibrato="1.0 0.75" />
+        <note measure="33" beat="3.5" duration="0.5" amplitudes="1 .8 .6" note="A4"
+            ADSR="0.3 0.2 0.8 0.4" vibrato="1.0 0.75" />
+        <note measure="33" beat="4.0" duration="0.5" amplitudes="1 .8 .6" note="A4"
+            ADSR="0.3 0.2 0.8 0.4" vibrato="1.0 0.75" />
+
+
+        <!-- "The lamb was sure to go!" -->
+        <note measure="34" beat="1" duration="0.5" amplitudes="1 .8 .6" note="A4"
+            ADSR="0.3 0.3 0.8 0.5" vibrato="1.0 0.75" />
+        <note measure="34" beat="1.5" duration="0.5" amplitudes="1 .7 .5" note="G4"
+            ADSR="0.3 0.2 0.9 0.4" vibrato="1.0 0.75" />
+        <note measure="34" beat="2" duration="0.5" amplitudes="1 .6 .4" note="G4"
+            ADSR="0.3 0.3 1.0 0.5" vibrato="1.0 0.75" />
+        <note measure="34" beat="2.5" duration="0.5" amplitudes="1 .8 .6" note="A4"
+            ADSR="0.2 0.3 0.7 0.5" vibrato="1.0 0.75" />
+        <note measure="34" beat="3" duration="0.5" amplitudes="1 .7 .5" note="G4"
+            ADSR="0.3 0.2 0.9 0.4" vibrato="1.0 0.75" />
+        <note measure="34" beat="3.5" duration="0.5" amplitudes="1 .8 .6" note="F4"
+            ADSR="0.3 0.2 0.8 0.4" vibrato="1.0 0.75" />
+
+        <!-- THE END -->
+        <note measure="35" beat="1" duration="1.5" amplitudes="1.0 0.5 0.3 0.2" note="G4"
+            ADSR="0.4 0.4 0.7 1.0" />
+        <note measure="35" beat="2.5" duration="1.5" amplitudes="1.0 0.5 0.3 0.2" note="F4"
+            ADSR="0.4 0.4 0.7 1.0" />
+        <note measure="36" beat="1" duration="1.5" amplitudes="1.0 0.5 0.3 0.2" note="E4"
+            ADSR="0.4 0.4 0.7 1.0" />
+        <note measure="36" beat="2.5" duration="1.5" amplitudes="1.0 0.5 0.3 0.2" note="D4"
+            ADSR="0.4 0.4 0.7 1.0" />
+        <note measure="37" beat="1" duration="3" amplitudes="1.0 0.4 0.3 0.1" note="C4"
+            ADSR="0.7 0.5 0.6 1.5" />
+    </instrument>
+</score>

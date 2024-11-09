@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<score>
+<instrument instrument="AdditiveSynthesis">
+    <!-- Measure 1: C  C  D  C -->
+    <note measure="1" beat="1.00" duration="0.5" amplitudes="1 .8 .6" note="C4"/>
+    <note measure="1" beat="1.50" duration="0.5" amplitudes="1 .8 .6" note="C4"/>
+    <note measure="1" beat="2.00" duration="1.0" amplitudes="1 .8 .6" note="D4"/>
+    <note measure="1" beat="3.00" duration="1.0" amplitudes="1 .8 .6" note="C4"/>
+
+    <!-- Measure 2: F  E -->
+    <note measure="2" beat="1.00" duration="1.0" amplitudes="1 .8 .6" note="F4"/>
+    <note measure="2" beat="2.00" duration="2.0" amplitudes="1 .8 .6" note="E4"/>
+
+    <!-- Measure 3: C  C  D  C -->
+    <note measure="3" beat="1.00" duration="0.5" amplitudes="1 .8 .6" note="C4"/>
+    <note measure="3" beat="1.50" duration="0.5" amplitudes="1 .8 .6" note="C4"/>
+    <note measure="3" beat="2.00" duration="1.0" amplitudes="1 .8 .6" note="D4"/>
+    <note measure="3" beat="3.00" duration="1.0" amplitudes="1 .8 .6" note="C4"/>
+
+    <!-- Measure 4: G  F  -->
+    <note measure="4" beat="1.00" duration="1.0" amplitudes="1 .8 .6" note="G4"/>
+    <note measure="4" beat="2.00" duration="2.0" amplitudes="1 .8 .6" note="F4"/>
+
+    <!-- Measure 5: C  C  C'  A -->
+    <note measure="5" beat="1.00" duration="0.5" amplitudes="1 .8 .6" note="C4"/>
+    <note measure="5" beat="1.50" duration="0.5" amplitudes="1 .8 .6" note="C4"/>
+    <note measure="5" beat="2.00" duration="1.0" amplitudes="1 .8 .6" note="C5"/>
+    <note measure="5" beat="3.00" duration="1.0" amplitudes="1 .8 .6" note="A4"/>
+
+    <!-- Measure 6: F  E  D -->
+    <note measure="6" beat="1.00" duration="0.5" amplitudes="1 .8 .6" note="F4"/>
+    <note measure="6" beat="1.50" duration="0.5" amplitudes="1 .8 .6" note="E4"/>
+    <note measure="6" beat="2.00" duration="2.0" amplitudes="1 .8 .6" note="D4"/>
+
+    <!-- Measure 7: Bb  Bb  A  F -->
+    <note measure="7" beat="1.00" duration="0.5" amplitudes="1 .8 .6" note="Bb3"/>
+    <note measure="7" beat="1.50" duration="0.5" amplitudes="1 .8 .6" note="Bb3"/>
+    <note measure="7" beat="2.00" duration="1.0" amplitudes="1 .8 .6" note="A4"/>
+    <note measure="7" beat="3.00" duration="1.0" amplitudes="1 .8 .6" note="F4"/>
+
+    <!-- Measure 8: G  F -->
+    <note measure="8" beat="1.00" duration="1.0" amplitudes="1 .8 .6" note="G4"/>
+    <note measure="8" beat="2.00" duration="2.0" amplitudes="1 .8 .6" note="F4"/>
+</instrument>
+
+
+</score>
