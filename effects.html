@@ -179,8 +179,9 @@
             I have implemented three effect classes—NoiseGate, Chorus, and Compression—within a parent Effects class, which contains each specific effect as an attribute.
             The Effects class also includes an EffectSelector structure that stores the effect index (ranging from 0 to 2 for NoiseGate, Compression, and Chorus, and -1 for none),
              as well as the wet and dry signal levels. For each instrument, the EffectSelector is populated through the score file, setting up the effects and their
-              parameters. After the instrument generates its audio, the samples are passed through each effect by calling the Process function, where the dry signal
-               is processed with the effect and then weighted by the wet factor, allowing flexible control over the mix of wet and dry signals for each effect.
+              parameters. After the instrument generates its audio, the samples are passed through each effect by calling the Process function. For controllable effects send, the dry factor 
+              represents the part of the original signal that goes directly into the effect processor, while the wet factor controls the amount of the processed (effect-applied) signal. To 
+              bypass effects and send the full unprocessed signal, you can set the effect to "none" and set both wet and dry to 1.
           </p>
           <p>
            <ol>
@@ -197,7 +198,8 @@
         <div class="content has-text-justified">
           <p>
             An effect specification in a score file is done in two places. In the effects tag, a specific effect tag is created with the name of the effect and its parameters. This is a global definition.
-            Then within an instrument, an effect tag is added to specify which effect to include along with its wet and dry contributions. Here is an example.
+            Then within an instrument, an effect tag is added to specify which effect to include along with its wet and dry contributions. 
+            Here is an example.
             
 <pre>
   <code>
@@ -227,7 +229,7 @@
             </effects>
           </p>
           <p>
-            Below are some results applied to the Happy Birthday melody. The last audio is a mixture of effects with different dry wet and dry combinations. Here is the  audio for reference:
+            Below are some results of the mentioned effects applied to the Happy Birthday melody. The last audio is a mixture of effects with different dry wet and dry combinations. Here is the original audio and its score file for reference:
             
             <div style="align-items: center;text-align: center;">
             <br>
@@ -277,7 +279,7 @@
                       </audio>
                     
                </ol>
-               Below is a comparison of the waveforms for these effects.
+               Since the difference might not be very noticeable from just the audio, below is a comparison of the waveforms for these effects.
                <br>
                <div style="text-align: center;">
                <img src="comparison.png" />
