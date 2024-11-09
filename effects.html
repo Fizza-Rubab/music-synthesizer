@@ -63,8 +63,11 @@
           Components
         </a>
         <div class="navbar-dropdown">
-          <a class="navbar-item" href="https://hypernerf.github.io">
+          <a class="navbar-item" href="additive.html">
             Additive Synthesis
+          </a>
+          <a class="navbar-item" href="effects.html">
+            Effects Module
           </a>
         </div>
       </div>
@@ -79,15 +82,15 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">Additive Synthesis Component</h1>
+          <h1 class="title is-1 publication-title">Effects Module</h1>
           <div class="is-size-5 publication-authors">
             <span class="author-block">
-              <a href="https://fizza-rubab.github.io">Fizza Rubab</a><sup>1</sup>,</span>
+              Fizza Rubab</span>
             </span>
           </div>
 
           <div class="is-size-5 publication-authors">
-            <span class="author-block"><sup>1</sup>Michigan State University</span>
+            <span class="author-block">Michigan State University</span>
           </div>
 
           <!-- <div class="column has-text-centered">
@@ -146,26 +149,6 @@
 </section>
 
 
-
-<section class="hero is-light is-small">
-  <div class="hero-body">
-    <div class="container is-centered has-text-centered">
-      <audio controls>
-        <source src="audio/hbd.wav" type="audio/wav">
-      </audio>
-      <span class="link-block">
-        <a href="scores/additive.score"
-           class="external-link button is-normal is-rounded is-dark">
-          <span class="icon">
-              <i class="fas fa-file-code"></i>
-          </span>
-          <span>Score file</span>
-        </a>
-    </div>
-  </div>
-</section>
-
-
 <!-- <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
@@ -193,41 +176,107 @@
         </span>
         <div class="content has-text-justified">
           <p>
-            This is a solo project by me. The selection is a compilation of melodies we have all heard and enjoyed since our childhoods. Even across
-            different language, cultures and regions, the melodies are all the same making us all undergo a shared experience in our lives.
+            I have implemented three effect classes—NoiseGate, Chorus, and Compression—within a parent Effects class, which contains each specific effect as an attribute.
+            The Effects class also includes an EffectSelector structure that stores the effect index (ranging from 0 to 2 for NoiseGate, Compression, and Chorus, and -1 for none),
+             as well as the wet and dry signal levels. For each instrument, the EffectSelector is populated through the score file, setting up the effects and their
+              parameters. After the instrument generates its audio, the samples are passed through each effect by calling the Process function, where the dry signal
+               is processed with the effect and then weighted by the wet factor, allowing flexible control over the mix of wet and dry signals for each effect.
           </p>
           <p>
-            Our approach augments neural radiance fields
-            (NeRF) by optimizing an
-            additional continuous volumetric deformation field that warps each observed point into a
-            canonical 5D NeRF.
-            We observe that these NeRF-like deformation fields are prone to local minima, and
-            propose a coarse-to-fine optimization method for coordinate-based models that allows for
-            more robust optimization.
-            By adapting principles from geometry processing and physical simulation to NeRF-like
-            models, we propose an elastic regularization of the deformation field that further
-            improves robustness.
+           <ol>
+            <li><strong>Noise Gate:</strong> attenuates signals below a certain threshold to remove unwanted noise. The attenuation is down gradually in a linear fashion. Below is a sample effect applied on a happy birthday melody.</li>
+            <li><strong>Compression:</strong> reduces the dynamic range of the audio by applying gain reduction to signals above a set threshold. It uses parameters that are threshold level, the compression ratio, attack, and release time.</li>
+            <li><strong>Chorus:</strong> The Chorus effect modulates the audio signal with a delayed version of itself, creating a thicker sound by simulating multiple voices. Parameters are delay time, rate/speed of modulation, and range/depth of modulation.</li>
+          </ol>
+
           </p>
         </div>
-        <h2 class="title is-3">Score Format</h2>
+        <h2 class="title is-3">Score Files and Format</h2>
         
         </span>
         <div class="content has-text-justified">
           <p>
-            This is a solo project by me. The selection is a compilation of melodies we have all heard and enjoyed since our childhoods. Even across
-            different language, cultures and regions, the melodies are all the same making us all undergo a shared experience in our lives.
+            An effect specification in a score file is done in two places. In the effects tag, a specific effect tag is created with the name of the effect and its parameters. This is a global definition.
+            Then within an instrument, an effect tag is added to specify which effect to include along with its wet and dry contributions. Here is an example.
+            
+<pre>
+  <code>
+  &lt;?xml version="1.0" encoding="utf-8"?&gt;
+  &lt;score bpm="60" beatspermeasure="4"&gt;
+    &lt;effects&gt;
+      &lt;effect name="noisegate" threshold="0.5" /&gt;
+      &lt;effect name="chorus" samplerate="44100" delay=".01" range=".8" rate="20" /&gt;
+      &lt;effect name="compression" threshold="0.5" ratio="0.25" attack="0.5" release="0.5"/&gt;
+    &lt;/effects&gt;
+    &lt;instrument instrument="AdditiveSynthesis"&gt;
+      &lt;effect which="noisegate" wet="1.0" dry="1.0" /&gt;
+      &lt;effect which="compression" wet="0.6" dry="0.4" /&gt;
+      &lt;effect which="chorus" wet="0.8" dry="1.0" /&gt;
+      &lt;note measure="1" beat="1.00" duration="0.5" amplitudes="1 0.8 0.6 0.4" note="C4" ADSR=".2 .3 .5 .6"/&gt;
+      ...
+    &lt;/instrument&gt;
+    ...
+  &lt;/score&gt;
+  </code>
+  </pre>
+
+            <effects>
+              <effect name="noisegate" threshold="0.8" />
+              <effect name="compression" threshold="0.5" ratio="0.8" attack="0.3" release="0.7" />
+              <effect name="chorus" samplerate="44100" delay=".015" range=".1" rate="2.0" />
+            </effects>
           </p>
           <p>
-            Our approach augments neural radiance fields
-            (NeRF) by optimizing an
-            additional continuous volumetric deformation field that warps each observed point into a
-            canonical 5D NeRF.
-            We observe that these NeRF-like deformation fields are prone to local minima, and
-            propose a coarse-to-fine optimization method for coordinate-based models that allows for
-            more robust optimization.
-            By adapting principles from geometry processing and physical simulation to NeRF-like
-            models, we propose an elastic regularization of the deformation field that further
-            improves robustness.
+            Below are some results applied to the Happy Birthday melody. The last audio is a mixture of effects with different dry wet and dry combinations. Here is the  audio for reference:
+            
+            <div style="align-items: center;text-align: center;">
+            <br>
+            <audio controls>
+              <source src="audio/hbd_original.wav" type="audio/wav">
+            </audio>
+            <a href="scores/hbd.score"
+              class="external-link button is-centered is-normal is-rounded is-dark">
+              <span class="icon">
+                  <i class="fas fa-file-code"></i>
+              </span>
+              <span>Score file</span>
+            </a>
+          </div>
+              <ol>
+               <li><strong>Noise Gate:</strong> 
+                <pre><code>&lt;effect name="noisegate" threshold="0.8" /&gt;</code></pre>
+                <audio controls>
+                  <source src="audio/hbd_noisegate.wav" type="audio/wav">
+                </audio>
+                <li><strong>Compression:</strong> 
+                  <pre><code>&lt;effect name="compression" threshold="0.4" ratio="100" attack="0.3" release="0.7" /&gt;</code></pre>
+                  <audio controls>
+                    <source src="audio/hbd_compress.wav" type="audio/wav">
+                  </audio>
+                  <li><strong>Chorus:</strong> 
+                    <pre><code>&lt;effect name="chorus" samplerate="44100" delay=".0075" range=".2" rate="4.0"  /&gt;</code></pre>
+                    <audio controls>
+                      <source src="audio/hbd_chorus.wav" type="audio/wav">
+                    </audio>
+                    <li><strong>Controllable Effects Send</strong> 
+                      <pre><code>
+&lt;effects>
+  &lt;effect name="noisegate" threshold="0.9" /&gt;
+  &lt;effect name="compression" threshold="0.4" ratio="200" attack="0.5" release="0.5" /&gt;
+  &lt;effect name="chorus" samplerate="44100" delay=".0009" range=".8" rate="4.0" /&gt;
+&lt;/effects&gt;
+&lt;instrument instrument="AdditiveSynthesis"&gt;
+  &lt;effect which="noisegate" wet="0.25" dry="0.75" /&gt;
+  &lt;effect which="compression" wet="0.9" dry="1.0" /&gt;
+  &lt;effect which="chorus" wet="1.0" dry="0.8" /&gt;
+    ...
+&lt;/instrument>
+                      </code></pre>
+                      <audio controls>
+                        <source src="audio/hbd_mix.wav" type="audio/wav">
+                      </audio>
+                    
+               </ol>
           </p>
         </div>
         <h2 class="title is-3">Grading Elements</h2>
@@ -236,12 +285,11 @@
         <div class="content has-text-justified">
             <p>
               <ul>
-              <li> 10 - Sinusoid playback on demand from the sequencer  &#x2705 </li>
-              <li> 20 - Definition of all harmonics &#x2705 </li>
-              <li> 30 - Envelope generation  &#x2705 </li>
-              <li> 35 - Polyphony &#x274c </li>
-              <li> 40 - Sound cross-fading &#x274c </li>
-              <li> 50 - Vibrato  &#x2705 </li>
+              <li> 10 - Component passes audio &#x2705 </li>
+              <li> 20 - 1 Effectss &#x2705 </li>
+              <li> 20 - 3 Effect  &#x2705 </li>
+              <li> 40 - Controllable effects send &#x2705 </li>
+              <li> 50 - 4 Effects &#x274c </li>
             </ul>
             </p>
       </div>
@@ -249,8 +297,6 @@
     
   </div>
 </section>
-
-
 
 <footer class="footer">
   <div class="container">

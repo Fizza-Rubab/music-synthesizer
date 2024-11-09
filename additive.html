@@ -63,8 +63,11 @@
           Components
         </a>
         <div class="navbar-dropdown">
-          <a class="navbar-item" href="https://hypernerf.github.io">
+          <a class="navbar-item" href="additive.html">
             Additive Synthesis
+          </a>
+          <a class="navbar-item" href="effects.html">
+            Effects Module
           </a>
         </div>
       </div>
@@ -82,12 +85,12 @@
           <h1 class="title is-1 publication-title">Additive Synthesis Component</h1>
           <div class="is-size-5 publication-authors">
             <span class="author-block">
-              <a href="https://fizza-rubab.github.io">Fizza Rubab</a><sup>1</sup>,</span>
+              Fizza Rubab</span>
             </span>
           </div>
 
           <div class="is-size-5 publication-authors">
-            <span class="author-block"><sup>1</sup>Michigan State University</span>
+            <span class="author-block">Michigan State University</span>
           </div>
 
           <!-- <div class="column has-text-centered">
@@ -151,7 +154,7 @@
   <div class="hero-body">
     <div class="container is-centered has-text-centered">
       <audio controls>
-        <source src="audio/hbd.wav" type="audio/wav">
+        <source src="audio/additive.wav" type="audio/wav">
       </audio>
       <span class="link-block">
         <a href="scores/additive.score"
@@ -193,42 +196,58 @@
         </span>
         <div class="content has-text-justified">
           <p>
-            This is a solo project by me. The selection is a compilation of melodies we have all heard and enjoyed since our childhoods. Even across
-            different language, cultures and regions, the melodies are all the same making us all undergo a shared experience in our lives.
-          </p>
-          <p>
-            Our approach augments neural radiance fields
-            (NeRF) by optimizing an
-            additional continuous volumetric deformation field that warps each observed point into a
-            canonical 5D NeRF.
-            We observe that these NeRF-like deformation fields are prone to local minima, and
-            propose a coarse-to-fine optimization method for coordinate-based models that allows for
-            more robust optimization.
-            By adapting principles from geometry processing and physical simulation to NeRF-like
-            models, we propose an elastic regularization of the deformation field that further
-            improves robustness.
-          </p>
+            I implemented an additive synthesis component that enables users to define and add harmonics to a sine wave for music composition. 
+            It supports configuring an Attack, Decay, Sustain, and Release (ADSR) envelope, as well as vibrato rate and frequency. The main class, 
+            CAdditiveSynthesis, contains a CAdditiveSineWave object that generates harmonics and incorporates vibrato via a differential sinewave generator.
+        </p>
+        <p>
+            The score file demonstrates the capabilities of the AdditiveSynthesis component. The first tune features harmonics (up to 4 in this file), an ADSR profile, 
+            and a high vibrato effect, resulting in a trembling sound. The second tune removes the vibrato, while the third omits the ADSR envelope, 
+            giving the sound a more raw, aggressive tone. Finally, the removal of upper harmonics results in a plainer sound with reduced high frequencies.
+        </p>
+        
         </div>
         <h2 class="title is-3">Score Format</h2>
         
         </span>
         <div class="content has-text-justified">
           <p>
-            This is a solo project by me. The selection is a compilation of melodies we have all heard and enjoyed since our childhoods. Even across
-            different language, cultures and regions, the melodies are all the same making us all undergo a shared experience in our lives.
+            The instrument can be specified in the score file as follows.
+            <pre>
+              <code>
+&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;score bpm="60" beatspermeasure="4"&gt;
+  &lt;instrument instrument="AdditiveSynthesis"&gt;
+  ...
+  &lt;instrument /&gt;
+&lt;score /&gt;
+              </code>  
+            </pre>
+            <p>
+              Each note allows you to specify the amplitudes of the harmonics as space-separated floats, controlling their volume relative to the fundamental note. 
+              <pre>
+                <code>
+&lt;note measure="1" beat="1.00" duration="0.5" amplitudes="1 0.8 0.6 0.4" note="C4"/&gt;
+&lt;note measure="2" beat="1.00" duration="0.5" amplitudes="1 0.0 0.8 0.0 0.6 0.0 0.2" note="C4"/&gt;
+                </code>  
+              </pre>
+          
+              The Attack, Decay, Sustain, and Release envelope can be defined as space-separated floats to control how the sound evolves over time. The Attack defines how quickly the sound reaches full volume, Decay controls the drop in volume after the initial attack, Sustain determines the volume while the note is held, and Release sets the fade-out speed when the note ends.
+              <pre>
+                <code>
+&lt;note measure="1" beat="1.00" duration="0.5" ADSR=".3 .4 .5 .8" amplitudes="1 0.8 0.6 0.4" note="C4" /&gt;
+                </code>  
+              </pre>
+          
+              Vibrato can also be applied to each note as a subtle variation in pitch, defined by a rate (speed of modulation) and a frequency (intensity of modulation) as space-separated floats.
+              <pre>
+                <code>
+&lt;note measure="1" beat="3.00" duration="0.5" vibrato="9.0 8.0" amplitudes="1 0.7 0.5 0.3" note="D5" ADSR=".3 .5 .5 .4"/&gt;
+                </code>  
+              </pre>
           </p>
-          <p>
-            Our approach augments neural radiance fields
-            (NeRF) by optimizing an
-            additional continuous volumetric deformation field that warps each observed point into a
-            canonical 5D NeRF.
-            We observe that these NeRF-like deformation fields are prone to local minima, and
-            propose a coarse-to-fine optimization method for coordinate-based models that allows for
-            more robust optimization.
-            By adapting principles from geometry processing and physical simulation to NeRF-like
-            models, we propose an elastic regularization of the deformation field that further
-            improves robustness.
-          </p>
+          
+
         </div>
         <h2 class="title is-3">Grading Elements</h2>
         
